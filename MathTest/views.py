@@ -6,4 +6,5 @@ def problem_prototypes(request):
 
 
 def index(request):
-    return redirect('problem_prototypes/')  # temporary
+    # return redirect('problem_prototypes/')  # temporary
+    return render(request, "index.html")
