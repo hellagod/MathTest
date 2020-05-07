@@ -1,9 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-const ff = () =>{
-  return
-};
+
 class App extends React.Component {
     constructor(props) {
         super(props);
