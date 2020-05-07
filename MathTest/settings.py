@@ -126,5 +126,5 @@ USE_TZ = True
 STATIC_URL = local.STATIC_URL
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "frontend/build/static"),
 ]
