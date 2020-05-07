@@ -1,4 +1,5 @@
 import React from 'react';
+import App from "./App";
 import {
     BrowserRouter as Router,
     Switch,
@@ -16,7 +17,7 @@ let testurl = () =>{
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/about">About</Link>
+                            <Link to="/app">App</Link>
                         </li>
                         <li>
                             <Link to="/users">Users</Link>
@@ -27,8 +28,8 @@ let testurl = () =>{
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/about">
-                        1
+                    <Route path="/app">
+                        <App />
                     </Route>
                     <Route path="/users">
                         2

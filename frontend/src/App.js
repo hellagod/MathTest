@@ -12,7 +12,7 @@ class App extends React.Component {
     }
     componentDidMount() {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://localhost:8000/api/problem_prototypes', true); // замените адрес
+        xhr.open('GET', 'http://localhost:8000/api/problem_prototypes', true);
         xhr.send();
         this.setState({ isLoading: true })
 
