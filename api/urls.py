@@ -1,8 +1,9 @@
 from django.urls import path
 
-from api import views
-from api.views import ProblemPrototypes
+from api.views import ProblemPrototypes, problem_heads
 
 urlpatterns = [
     path('problem_prototypes', ProblemPrototypes.as_view()),
+    path('problem_heads/<int:id>', problem_heads),
+    path('problem_heads', problem_heads),
 ]

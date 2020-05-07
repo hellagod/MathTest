@@ -2,8 +2,8 @@ from django.http import JsonResponse
 from django.views import View
 from rest_framework.parsers import JSONParser
 
-from api.models import ProblemPrototype
-from api.serializers import ProblemPrototypeSerializer
+from api.models import ProblemPrototype, ProblemHead
+from api.serializers import ProblemPrototypeSerializer, ProblemHeadSerializer
 
 
 # Create your views here.
@@ -22,3 +22,12 @@ class ProblemPrototypes(View):
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
+
+
+def problem_heads(request, id=-1):
+    if id != -1:
+        heads = ProblemHead.objects.filter(prototype=id)
+    else:
+        heads = ProblemHead.objects.all()
+    serializer = ProblemHeadSerializer(heads, many=True)
+    return JsonResponse(serializer.data, safe=False)
