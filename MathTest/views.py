@@ -1,8 +1,4 @@
-from django.shortcuts import render, redirect
-
-
-def problem_prototypes(request):
-    return render(request, "problem_prototypes.html")
+from django.shortcuts import render
 
 
 def index(request):
