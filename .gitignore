@@ -6,3 +6,6 @@ __pycache__/
 /venv/
 MathTest/settings_local.py
 db.sqlite3
+public
+src
+frontend/node_modules
