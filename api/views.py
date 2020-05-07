@@ -17,8 +17,7 @@ class ProblemPrototypes(View):
     # def dispatch(self, request, *args, **kwargs):
     #     return super(ProblemPrototypes, self).dispatch(request, *args, **kwargs)
 
-    def get(self, request, id):
-        print(id)
+    def get(self, request):
         prototypes = ProblemPrototype.objects.all()
         serializer = ProblemPrototypeSerializer(prototypes, many=True)
         return JsonResponse(serializer.data, safe=False)
